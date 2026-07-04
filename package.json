@@ -1,0 +1,47 @@
+{
+  "name": "n8n-nodes-halopsa",
+  "version": "0.1.5",
+  "description": "n8n nodes for HaloPSA \u2014 tickets, notes, and attachments with live dropdowns",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Ori8 Automations"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ori8automations/n8n-nodes-halopsa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ori8automations/n8n-nodes-halopsa/issues"
+  },
+  "homepage": "https://github.com/ori8automations/n8n-nodes-halopsa#readme",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/HaloPsaApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/BetterHaloPsa/BetterHaloPsa.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "n8n-workflow": "^2.16.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
