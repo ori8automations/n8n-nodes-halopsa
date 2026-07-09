@@ -18,6 +18,17 @@ Beyond the missing resources, the stock node's credential requires a full base U
 
 The scope is deliberately narrower than the stock node — no client or user management. The goal is automation pipelines that interact with the ticket lifecycle: read tickets and their context, write notes, trigger on new or updated tickets. Deleting tickets or managing users from n8n workflows is out of scope by design and explicitly called out in the write-operations warning, since these nodes are frequently the backend for AI agent and MCP tool workflows where unguarded write access is a liability.
 
+## npm status / package positioning
+
+This package is **not currently published on npm** under `n8n-nodes-halopsa`. Until a publish is explicitly approved, install from a reviewed local tarball or directly from the GitHub repository.
+
+This is also not the only HaloPSA-related n8n community package. Other public npm packages include:
+
+- `n8n-nodes-halopsacomplete` — a broader HaloPSA API community node.
+- `@avantguardllc/n8n-nodes-halopsa` — a scoped HaloPSA community node.
+
+The intended positioning for this package is narrower: ticket-lifecycle workflows with live HaloPSA dropdowns, ticket notes/actions, attachment access, and clear warnings around AI/MCP exposure. Use whichever package best matches your workflow and safety model.
+
 ## Install
 
 **Recommended: tarball install (avoids peer-dep issues)**
@@ -25,7 +36,7 @@ The scope is deliberately narrower than the stock node — no client or user man
 ```bash
 npm pack
 # copy the .tgz to your n8n nodes directory, then:
-npm install /path/to/n8n-nodes-halopsa-0.1.4.tgz --legacy-peer-deps --ignore-scripts
+npm install /path/to/n8n-nodes-halopsa-0.1.6.tgz --legacy-peer-deps --ignore-scripts
 ```
 
 Restart n8n after install.

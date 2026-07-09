@@ -1,8 +1,12 @@
 import { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class HaloPsaApi implements ICredentialType {
+  // Internal type name — MUST stay 'haloPsaApi' so existing credentials and the
+  // BetterHaloPsa node (credentials: [{ name: 'haloPsaApi' }]) keep resolving.
   name = 'haloPsaApi';
-  displayName = 'HaloPSA API';
+  // Distinct display name so this does NOT collide with n8n's built-in
+  // HaloPSA credential (type 'haloPSAApi', also labelled "HaloPSA API").
+  displayName = 'Better HaloPSA API';
   documentationUrl = 'https://halopsa.com/guides/api-documentation/';
 
   properties: INodeProperties[] = [

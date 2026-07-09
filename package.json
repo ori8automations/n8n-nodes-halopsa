@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-halopsa",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "n8n nodes for HaloPSA \u2014 tickets, notes, and attachments with live dropdowns",
   "keywords": [
     "n8n-community-node-package"
